@@ -63,3 +63,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #gestion de inicio de sesion
 gem 'devise'
+
+#diseños
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
+
+# Use toastr-rails for notifications
+gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
