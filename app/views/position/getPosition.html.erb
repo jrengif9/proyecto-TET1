@@ -1,4 +1,70 @@
-<h1>Position</h1>
+<body class="">
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <%= render "/components/sidebarClientes" %>
+        <!-- End_Sidebar  -->
+        <div class="main-panel">
+
+        <!-- Navbar -->
+        <%= render "/components/navbar" %>
+    <!-- End_Navbar  -->
+            <div class="content">
+                <div class="container-fluid">
+                    
+                  <div class="row">
+
+                    <% while !@positions.empty? %>
+                      <% coordinate = @positions.pop %>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                          <div class="card card-stats">
+                            <div class="card-header card-header-rose card-header-icon">
+                              <div class="card-icon">
+                                <i class="material-icons">place</i>
+                              </div>
+                            <p class="card-category">Coordenadas <%= coordinate.id %> </p>
+                            <h3 class="card-title">Latitud: <%= coordinate.latitud %></h3>
+                            <h3 class="card-title">Longitud: <%= coordinate.longitud %></h3>
+                          </div>
+                          <div class="card-footer">
+                            <div class="stats">
+                              <i class="material-icons">local_offer</i> obtenido por javascript
+                            </div>
+                          </div>
+                        </div>  
+                    </div>
+
+            <% end %>
+
+
+            </div>
+            <!-- Wizard container -->
+
+                <%= render "/components/footer" %>
+
+            <!-- wizard container -->
+        </div>
+    </div>
+</body>
+
+
+<script src="https://demos.creative-tim.com/material-dashboard-pro/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+  //init wizard
+
+  demo.initMaterialWizard();
+
+  // Javascript method's body can be found in assets/js/demos.js
+  demo.initDashboardPageCharts();
+
+  demo.initCharts();
+
+});
+
+</script>
 
 <script>
 	function getLocation() {
@@ -26,14 +92,3 @@
 }
 	setInterval(getLocation,1000);
 </script>	
-
-
-<% while !@positions.empty? %>
-    <% coordinate = @positions.pop %>
-    <br><h3> Coordinate <%= coordinate.id %> </h3>
-    <ul>
-    	<li> <b>UserId:</b> <%= coordinate.user %></li>
-    	<li> <b>Latitude:</b> <%= coordinate.latitud %></li>
-    	<li> <b>Longitude:</b> <%= coordinate.longitud %></li>
-    </ul>
-<% end %>positions
