@@ -1,20 +1,7 @@
-<body class="">
-    <div class="wrapper">
-        <!-- Sidebar -->
-        <%= render "/components/sidebarGenerador" %>
-        <!-- End_Sidebar  -->
-        <div class="main-panel">
-
-        <!-- Navbar -->
-        <%= render "/components/navbar" %>
-    <!-- End_Navbar  -->
-            <div class="content">
-                <div class="container-fluid">
-                 
-            <!-- Wizard container -->
-								   <div class="col-md-12">
-
-					<div id="map"></div>
+<h1>Map#show</h1>
+<p>Find me in app/views/map/show.html.erb</p>
+<br>
+<div id="map"></div>
 <script>
   	function initMap(){
 	    var positions = <%= raw @results.to_json %>;
@@ -42,18 +29,3 @@
 <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe0d0tWZ9ErIv3r1YfnudfgyObTkL9DzM&callback=initMap" async defer> 
     </script>
-     
-    </div>
-                <%= render "/components/footer" %>
-
-            <!-- wizard container -->
-        </div>
-    </div>
-</body>
-
-
-<script src="https://demos.creative-tim.com/material-dashboard-pro/assets/js/plugins/jquery.bootstrap-wizard.js"></script>
-
-<script type="text/javascript">
-
-
