@@ -15,7 +15,7 @@ test:
   database: proyecto1_test
   username: pguser
   password: test123
-  host: postgres
+  host: db
   port: 5432
   pool: 5
 
@@ -24,7 +24,7 @@ production:
   database: proyecto1_production
   username: pguser
   password: test123
-  host: postgres
+  host: db
   port: 5432
   timeout: 5000 
   pool: 5
