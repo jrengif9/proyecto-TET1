@@ -8,5 +8,5 @@ COPY Gemfile.lock /railsApp/Gemfile.lock
 RUN bundle install
 COPY . /railsApp
 RUN rake db:migrate
-EXPOSE 3000
-CMD ["rails", "server", "--binding", "0.0.0.0"] # descomentaree cuando vaya a correrlo manualmente desde $ docker run ...
+#EXPOSE 3000
+#CMD ["rails", "server", "--binding", "0.0.0.0"] # descomentaree cuando vaya a correrlo manualmente desde $ docker run ...
