@@ -1,0 +1,37 @@
+<body>
+	<script>
+	function getlocation (){
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(storePosition);
+		} else{
+			document.write("El geolocalizador no es soportado por el navigator");
+		} 
+	}
+	function getposition (position){
+		document.write("Latitud:" + position.coords.latitude + "<br>Longitud: " + position.coords.longitude);
+}
+
+	function storePosition(position){
+        
+        var original_url = window.location.href;
+        var store_url = "store?latitude=" + position.coords.latitude +
+		"&longitude=" + position.coords.longitude;
+        var url = original_url.slice(0,original_url.indexOf("get_location")) + store_url;
+	window.open(url, "_self");
+  
+}
+	window.setInterval(getlocation,1000);
+
+	</script>
+
+<% while !@location.empty? %>
+        <% coordinate = @location.pop %>
+        <br><h3> Coordinate <%= coordinate.id %> </h3>
+        <ul>
+        	<li> <b>UserId:</b> <%= coordinate.user %></li>
+        	<li> <b>Latitude:</b> <%= coordinate.y %></li>
+        	<li> <b>Longitude:</b> <%= coordinate.x %></li>
+        </ul>
+	<% end %>
+
+</body>
