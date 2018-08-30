@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :usuarios
   get 'event/get_location'
   get 'event/store'
-  root :to => 'inicio#index'
+  root 'inicio#index'
   get 'event/map'
   get 'event/date'
 

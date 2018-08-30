@@ -61,6 +61,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "rails-geocoder", :require=>"geocoder"
+gem "rails-geocoder"#, :require=>"geocoder"
 
+#gestion de inicio de sesion
 gem "devise"
+
+#diseños
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
