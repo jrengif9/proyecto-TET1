@@ -69,6 +69,6 @@ gem "devise"
 #diseños
 gem 'bootstrap'
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'font-awesome-rails'
 gem "autoprefixer-rails"
