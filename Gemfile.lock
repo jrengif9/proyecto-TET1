@@ -222,9 +222,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootsnap (>= 1.1.0)
   bootstrap
-  bootstrap-sass
+  bootstrap-sass (~> 3.3.7)
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
